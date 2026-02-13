@@ -40,3 +40,18 @@ Si te parece muy complicado manejar archivos binarios (`BYTEA`), puedes usar est
 
 > [!TIP]
 > **¿Te gustaría que te ayude con un script pequeño de Python?** Podrás seleccionar un archivo de tu computadora y se subirá automáticamente a la tabla que acabamos de crear. ¡Es la forma más rápida de verlo funcionar!
+
+## 5. Instrucciones para usar el script de Python
+He creado el script en `scripts/upload_pdf.py`. Para usarlo:
+
+1.  **Instala Python** (si no lo tienes) desde [python.org](https://www.python.org/).
+2.  **Instala la librería necesaria**: Abre una terminal y escribe:
+    ```bash
+    pip install psycopg2-binary
+    ```
+3.  **Configura el script**: Abre `scripts/upload_pdf.py` y pon tu contraseña de Postgres donde dice `TU_CONTRASEÑA_AQUÍ`.
+4.  **Ejecuta el script**:
+    ```bash
+    python scripts/upload_pdf.py
+    ```
+5.  **Sigue los pasos**: Te pedirá tu nombre y se abrirá una ventana para elegir el PDF.
