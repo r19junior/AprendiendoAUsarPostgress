@@ -29,5 +29,14 @@ INSERT INTO documentos_investigacion (nombre_usuario, nombre_archivo, contenido_
 VALUES ('Juan Perez', 'tesis_v1.pdf', <datos_binarios_del_archivo>);
 ```
 
+## 4. ¿Cómo subir el PDF si soy principiante?
+PostgreSQL no permite "arrastrar y soltar" un archivo PDF directamente en la cuadrícula de pgAdmin. Normalmente, esto se hace mediante una pequeña aplicación (en Python, Node.js o C#) que convierte el archivo en bits y los manda a la columna `BYTEA`.
+
+### La alternativa fácil: "La Ruta"
+Si te parece muy complicado manejar archivos binarios (`BYTEA`), puedes usar este enfoque:
+1. Crea una carpeta en tu Windows llamada `C:\MisPDFs`.
+2. En tu tabla de Postgres, en lugar de `contenido_pdf BYTEA`, usa `ruta_pdf VARCHAR(500)`.
+3. Simplemente escribe el texto de dónde está el archivo: `C:\MisPDFs\tesis_juan.pdf`.
+
 > [!TIP]
-> Si los PDFs son muy grandes (más de 10MB), lo ideal es guardar el PDF en una carpeta de tu computadora y en la base de datos solo guardar la **ruta del archivo** (un texto como `C:/documentos/archivo.pdf`).
+> **¿Te gustaría que te ayude con un script pequeño de Python?** Podrás seleccionar un archivo de tu computadora y se subirá automáticamente a la tabla que acabamos de crear. ¡Es la forma más rápida de verlo funcionar!
