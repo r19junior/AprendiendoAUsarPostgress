@@ -8,10 +8,10 @@ Este proyecto es una guía completa y una herramienta funcional para gestionar d
 - **Dashboard Web**: Interfaz moderna para visualizar tus investigaciones y sus resúmenes.
 - **Gestión DB**: Scripts para preparar y actualizar tu base de datos.
 
-## 📸 Resultados (pgAdmin)
-Aquí podemos ver cómo se almacenan los datos, incluyendo el nombre del investigador, el archivo binario y el resumen generado:
+## 📸 Resultado Final
+¡Lo logramos! Aquí tienes la visualización de los datos subidos y procesados con su resumen:
 
-![Resultado Final en pgAdmin](assets/resultado_pgadmin.png)
+![Resultado Final del Proyecto](assets/imagen.png)
 
 ## ⚙️ Cómo Clonar y Configurar
 Si quieres usar este proyecto en otra computadora, sigue estos pasos:
