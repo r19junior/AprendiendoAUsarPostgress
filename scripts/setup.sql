@@ -20,5 +20,15 @@ INSERT INTO proyectos (titulo, descripcion, investigador_nombre)
 VALUES 
 ('Análisis de Datos con Postgres', 'Estudio sobre el rendimiento de consultas relacionales.', 'Usuario Investigador');
 
+-- 3. Tabla para Nombres y PDFs (Solicitud adicional)
+CREATE TABLE IF NOT EXISTS documentos_investigacion (
+    id SERIAL PRIMARY KEY,
+    nombre_usuario VARCHAR(100) NOT NULL,
+    nombre_archivo VARCHAR(255),
+    contenido_pdf BYTEA, -- Almacena el binario del PDF
+    fecha_subida TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Consulta de verificación
 -- SELECT * FROM proyectos;
+-- SELECT * FROM documentos_investigacion;
