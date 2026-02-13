@@ -13,13 +13,13 @@ DB_CONFIG = {
 os.environ['PGCLIENTENCODING'] = 'utf-8'
 
 def generar_resumen_ia(texto):
-    # Por ahora, simulamos un resumen extrayendo los primeros 500 caracteres
-    # Aquí es donde se podría integrar la API de Llama, OpenAI, etc.
+    # Simulación de resumen acortada (200 caracteres) y sin prefijo
     if not texto:
-        return "No se pudo extraer texto del documento."
+        return "No se pudo extraer texto."
     
-    resumen = texto[:500].strip() + "..."
-    return f"[RESUMEN AUTOMÁTICO]: {resumen}"
+    # Limpiamos saltos de línea y acortamos
+    resumen = texto[:200].strip().replace('\n', ' ') + "..."
+    return resumen
 
 def procesar_nuevos_pdfs():
     if DB_CONFIG["password"] == "TU_CONTRASEÑA_AQUÍ":
