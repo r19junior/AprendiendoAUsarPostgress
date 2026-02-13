@@ -88,5 +88,12 @@ if __name__ == "__main__":
     if archivo:
         print(f"Seleccionado: {archivo}")
         subir_a_postgres(archivo, usuario)
+        
+        # Preguntar si desea resumir ahora
+        resp = input("\n¿Deseas generar el resumen de IA ahora mismo? (s/n): ")
+        if resp.lower() == 's':
+            import summarize_pdf
+            summarize_pdf.DB_CONFIG = DB_CONFIG # Compartir config
+            summarize_pdf.procesar_nuevos_pdfs()
     else:
         print("\n[!] Cancelado: No se seleccionó ningún archivo.")

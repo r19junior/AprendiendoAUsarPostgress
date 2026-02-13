@@ -43,9 +43,33 @@ Si quieres ver qué hay guardado, haz esto:
 
 ---
 
-## 🚀 ¿Qué sigue?
-Ahora que ya sabes subir archivos, podrías:
-*   Crear una tabla para **Notas de Investigación** que se relacionen con tus PDFs.
-*   Hacer un script para **Descargar/Extraer** los PDFs de la base de datos a tu escritorio.
+## 🟠 ETAPA 4: El Dashboard IA (Ver tus resúmenes)
+Ahora puedes ver tus documentos en una página web moderna:
 
-**¿Ves el camino más claro ahora?** Guarda este archivo como tu referencia principal.
+1.  **Instala las librerías web**:
+    ```powershell
+    pip install flask pymupdf
+    ```
+2.  **Lanza el Dashboard**:
+    ```powershell
+    python web/app.py
+    ```
+3.  **Abre tu navegador** en: `http://localhost:5000`
+
+---
+
+## 🧪 ETAPA 5: Procesamiento de IA
+El sistema ahora puede leer tus PDFs y escribir un resumen automáticamente:
+
+1.  **Actualización de DB**: Si es la primera vez, ejecuta:
+    ```powershell
+    python scripts/update_database.py
+    ```
+2.  **Resumen Automático**: Al usar `upload_pdf.py`, el programa te preguntará si quieres generar el resumen al instante. ¡Dile que sí!
+
+---
+
+## 📂 Nueva estructura
+*   `web/`: Contiene tu aplicación Dashboard.
+*   `scripts/summarize_pdf.py`: El "cerebro" que lee los PDFs.
+*   `scripts/update_database.py`: Prepara tu base de datos para los resúmenes.

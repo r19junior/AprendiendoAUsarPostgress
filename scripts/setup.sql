@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS documentos_investigacion (
     nombre_usuario VARCHAR(100) NOT NULL,
     nombre_archivo VARCHAR(255),
     contenido_pdf BYTEA, -- Almacena el binario del PDF
+    resumen TEXT,        -- Nueva columna para el resumen IA
     fecha_subida TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

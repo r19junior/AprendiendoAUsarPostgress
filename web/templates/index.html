@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Dashboard - ResIA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Research Dashboard <span class="badge">IA</span></h1>
+            <p>Visualización inteligente de documentos de investigación</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stats">
+            <div class="card">
+                <h3>Total Documentos</h3>
+                <p class="number">{{ documentos|length }}</p>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Investigador</th>
+                        <th>Archivo</th>
+                        <th>Fecha</th>
+                        <th>Resumen Inteligente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doc in documentos %}
+                    <tr>
+                        <td class="user-name"><strong>{{ doc[1] }}</strong></td>
+                        <td><span class="file-icon">📄</span> {{ doc[2] }}</td>
+                        <td class="date">{{ doc[4].strftime('%d/%m/%Y %H:%M') }}</td>
+                        <td class="summary">
+                            {% if doc[3] %}
+                                <div class="summary-text">{{ doc[3] }}</div>
+                            {% else %}
+                                <span class="status-pending">Pendiente de procesar...</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ResIA - Proyecto de Investigación</p>
+        </div>
+    </footer>
+</body>
+</html>

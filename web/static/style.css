@@ -1,0 +1,137 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.stats {
+    margin-bottom: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    display: inline-block;
+}
+
+.card h3 {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card .number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.table-container {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f1f5f9;
+    text-align: left;
+    padding: 16px;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+td {
+    padding: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.user-name {
+    color: var(--primary);
+}
+
+.date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.summary {
+    max-width: 400px;
+}
+
+.summary-text {
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-left: 4px solid var(--primary);
+}
+
+.status-pending {
+    color: #f59e0b;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
