@@ -1,0 +1,21 @@
+# Entornos virtuales
+.venv/
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporales y logs
+temp_*
+*.log
+
+# VS Code
+.vscode/
+
+# Base de Datos (Seguridad)
+# (Opcional) Si quieres ignorar archivos de configuración locales
+# config_local.py
